@@ -1,0 +1,68 @@
+body {
+	background-color: darkgrey;
+}
+
+input[type="checkbox"] {
+	width: 30px;
+	height: 30px;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	-o-appearance: none;
+	appearance: none;
+	outline: 5px solid black;
+	box-shadow: none;
+	margin: 15px;
+	display: -moz-inline-stack;
+}
+
+input[type="checkbox"]:hover {
+	transform: scale(1.2);
+}
+
+.container {
+	position: relative;
+}
+
+.options {
+	position: absolute;
+	left: 1px;
+	top: 1px;
+	transform: rotate(180deg);
+	display: inline-block;
+}
+
+.options div {
+	float: right;
+}
+#canvas {
+	cursor: crosshair;
+	position: absolute;
+}
+
+.toolbar {
+	position: absolute;
+	top: 1px;
+	right: 1px;
+	display: inline-block;
+}
+
+.toolbar div {
+	float: right;
+	padding-right: 10px;
+	font-size: 20px;
+}
+
+.slider {
+	width: 560px;
+	height: 50px;
+	left: 1%;
+	top: 20px;
+	position: absolute;
+}
+
+input[type="button"] {
+	background-color: darkslategrey; /* Green */
+	border: none;
+	font-size: 20px;
+	text-align: center;
+}
