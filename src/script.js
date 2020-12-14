@@ -83,13 +83,17 @@ $(".slider").mouseover(function(){
 	$(".options").fadeIn("5000")	
 })
 
-$("#close").click(function(){
+$("#close").click(function () {
 	window.close();
-})
+});
 
-$("#minimize").click(function(){
-	window.minimize();
-})
+$("#minimize").click(function () {
+	mainWindow.minimize();
+});
+
+$("#maximize").click(function () {
+	mainWindow.maximize();
+});
 
 
 // &#128469;

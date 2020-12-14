@@ -1,5 +1,5 @@
 body {
-	background-color: darkgrey;
+	background-color: white;
 }
 
 input[type="checkbox"] {
@@ -61,7 +61,8 @@ input[type="checkbox"]:hover {
 }
 
 input[type="button"] {
-	background-color: darkslategrey; /* Green */
+	background-color: lightgrey; /* Green */
+	color: white;
 	border: none;
 	font-size: 20px;
 	text-align: center;
