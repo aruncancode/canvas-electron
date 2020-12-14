@@ -1,56 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="styles.css" />
+		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+		<title>Canvas</title>
+	</head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<body>
+		<div class="container">
+			<canvas id="canvas" height="1070" width="1910"></canvas>
+			<div class="toolbar">
+				<div class="close">
+					<input id="close" type="button" value="&#10006;" />
+				</div>
+				<div class="minimize">
+					<input id="minimize" type="button" value="&#x1F5D5;" />
+				</div>
+			</div>
+			<div class="slider"></div>
+			<div class="options">
+				<div class="brushSizes">
+					<input
+						type="checkbox"
+						id="10"
+						style="outline: 10px solid lightblue"
+					/>
+					<input
+						type="checkbox"
+						id="5"
+						style="outline: 5px solid lightblue"
+					/>
 
-  <title>Canvas</title>
-</head>
+					<input
+						type="checkbox"
+						id="1"
+						style="outline: 1px solid lightblue"
+					/>
+				</div>
+				<div class="brushStrokes">
+					<input
+						type="checkbox"
+						id="solid"
+						style="outline: 5px solid lightblue"
+					/>
+					<input
+						type="checkbox"
+						id="dotted"
+						style="outline: 5px dotted lightblue"
+					/>
+					<input
+						type="checkbox"
+						id="dashed"
+						style="outline: 5px dashed lightblue"
+					/>
+				</div>
+				<div class="brushColours">
+					<input
+						type="checkbox"
+						id="black"
+						style="outline-color: black"
+					/>
+					<input
+						type="checkbox"
+						id="red"
+						style="outline-color: red"
+					/>
+					<input
+						type="checkbox"
+						id="blue"
+						style="outline-color: blue"
+					/>
+				</div>
+				<div class="tools"></div>
+				<div class="clear">
+					<input
+						type="checkbox"
+						id="clear"
+						style="outline: 5px dotted grey"
+					/>
+				</div>
+			</div>
+		</div>
 
-<body>
-  <div class="container">
-    <canvas id="canvas" height="1070" width="1910"></canvas>
-    <div class="toolbar">
-      <div class="close">
-        <input id="close" type="button" value="&#10006;" />
-      </div>
-      <div class="maximize">
-        <input id="maximize" type="button" value="&#9744;" />
-      </div>
-      <div class="minimize">
-        <input id="minimize" type="button" value="&#x1F5D5;" />
-      </div>
-    </div>
-    <div class="slider">
-    </div>
-    <div class="options">
-      <div class="brushSizes">
-        <input type="checkbox" id="10" style="outline: 10px solid lightblue" />
-        <input type="checkbox" id="5" style="outline: 5px solid lightblue" />
-
-        <input type="checkbox" id="1" style="outline: 1px solid lightblue" />
-      </div>
-      <div class="brushStrokes">
-        <input type="checkbox" id="solid" style="outline: 5px solid lightblue" />
-        <input type="checkbox" id="dotted" style="outline: 5px dotted lightblue" />
-        <input type="checkbox" id="dashed" style="outline: 5px dashed lightblue" />
-      </div>
-      <div class="brushColours">
-        <input type="checkbox" id="black" style="outline-color: black" />
-        <input type="checkbox" id="red" style="outline-color: red" />
-        <input type="checkbox" id="blue" style="outline-color: blue" />
-      </div>
-      <div class="tools"></div>
-      <div class="clear">
-        <input type="checkbox" id="clear" style="outline: 5px dotted grey" />
-      </div>
-    </div>
-  </div>
-  <script src="script.js"></script>
-</body>
-
+		<script src="script.js"></script>
+	</body>
 </html>

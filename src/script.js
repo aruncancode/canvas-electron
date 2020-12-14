@@ -1,3 +1,7 @@
+const { ipcRenderer } = require("electron")
+window.$ = window.jQuery = require("jquery");
+
+
 mouse_down = false;
 selected_size = 5;
 selected_colour = "black";
@@ -33,7 +37,6 @@ $("#canvas").mousedown(function (e) {
 	lastx = e.clientX;
 	lasty = e.clientY;
 	ctx.beginPath();
-	// ctx.moveTo(e.clientX, e.clientY);
 });
 
 $("#canvas").mousemove(function (e) {
@@ -88,12 +91,12 @@ $("#close").click(function () {
 });
 
 $("#minimize").click(function () {
-	mainWindow.minimize();
+	ipcRenderer.send("minimize")
 });
 
-$("#maximize").click(function () {
-	mainWindow.maximize();
-});
+// $("#maximize").click(function () {
+// 	out.send("maximize")
+// });
 
 
 // &#128469;

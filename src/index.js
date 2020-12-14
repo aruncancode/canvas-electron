@@ -1,4 +1,4 @@
-const { app, BrowserWindow } = require("electron");
+const { app, BrowserWindow, ipcMain } = require("electron");
 const path = require("path");
 
 // Handle creating/removing shortcuts on Windows when installing/uninstalling.
@@ -12,6 +12,10 @@ const createWindow = () => {
 	const mainWindow = new BrowserWindow({
 		width: 1920,
 		height: 1080,
+		icon: path.join(__dirname, "icons", "splash.png"),
+		webPreferences: {
+			nodeIntegration: true,
+		},
 	});
 
 	mainWindow.loadFile(path.join(__dirname, "index.html"));
@@ -41,6 +45,10 @@ app.on("activate", () => {
 	if (BrowserWindow.getAllWindows().length === 0) {
 		createWindow();
 	}
+});
+
+ipcMain.on("minimize", (event) => {
+	BrowserWindow.getFocusedWindow().minimize();
 });
 
 // In this file you can include the rest of your app's specific main process
